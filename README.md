@@ -69,14 +69,14 @@ The user enters bank account details, such as the account number and bank code.
 The system validates the bank data and confirms the transaction with the user's bank.
 Additionally, for each payment method, there's also the possibility of processing payments in different currencies, such as USD, EUR, GBP, among others.
 
-Your task is to create a payment processing system using the Factory design pattern that allows for flexible and easy payment processing, handling different payment methods and currencies.
+Your task is to create a payment processing system using the Factory and Strategy design pattern that allows for flexible and easy payment processing, handling different payment methods and currencies.
 
 
 ### Built With
 
 
 * Spring boot
-* [Spring Batch](https://spring.io/projects/spring-batch)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
