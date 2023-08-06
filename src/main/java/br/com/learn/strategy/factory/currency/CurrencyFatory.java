@@ -1,7 +1,5 @@
 package br.com.learn.strategy.factory.currency;
 
-import org.springframework.stereotype.Component;
-
 import br.com.learn.strategy.enums.TargetCurrencyEnum;
 import br.com.learn.strategy.factory.currency.handler.CurrencyEUR;
 import br.com.learn.strategy.factory.currency.handler.CurrencyGBP;
@@ -13,16 +11,12 @@ public class CurrencyFatory {
 
     public static CurrencyMethodHandler createCurrencyProcessor(TargetCurrencyEnum targetCurrencyEnum) {
 
-        switch (targetCurrencyEnum) {
-            case EUR:
-                return new CurrencyEUR();
-            case GBP:
-                return new CurrencyGBP();
-            case USD:
-                return new CurrencyUSD();
-            default:
-                throw new IllegalArgumentException("Invalid currency : " );
-        }
+        return switch (targetCurrencyEnum) {
+            case EUR -> new CurrencyEUR();
+            case GBP -> new CurrencyGBP();
+            case USD -> new CurrencyUSD();
+            default -> throw new IllegalArgumentException("Invalid currency" );
+        };
     }
     
 }
